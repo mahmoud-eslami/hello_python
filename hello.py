@@ -69,6 +69,7 @@ print('END')
 
 #########################################################
 #nested loop
+#check prime number 
 
 number = 2 
 
