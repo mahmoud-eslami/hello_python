@@ -103,4 +103,11 @@ for number in range(2,51):
 #func define with def keyword in py
 
 ##########################################################
+#String Encoding
+
+#give me asci code
+ord('a')
+#give me char of each code
+chr(97)
+
 
