@@ -111,3 +111,61 @@ ord('a')
 chr(97)
 
 
+#############################################
+#Advance python started 
+# 1 - oop 
+# 2 - database
+# 3 - web scraping
+# 4 - machine learning 
+# 5 - project 
+# 6 - working with api
+##############################################
+# 1 - oop :
+############################################## 
+
+#lambda functions ,filter ,map
+
+myfunc = lambda x : x * 2 
+
+myfunc(2)
+
+a = [(1,2),(3,4),(6,1),(7,7)]
+
+a.sort() # sort per first value 
+
+a.sort(key = lambda x : x[1]) # sort per second value 
+
+mylist = [1,4,7,9,0,6,5,3,2]
+
+#member of list go to power 2
+
+list(map(lambda x : x**2 , mylist ))
+
+numbers = [10,23,41,1,5,66,230,21,55]
+
+# new form of if else **********************
+list(map(lambda x : 'big' if x>10 else 'small',numbers))
+
+list(filter(lambda x : x%2 == 0,numbers))
+
+# generator ,function ,yield
+
+def firstn():
+    yield 1
+    yield 2
+    yield '...'
+    yield 100
+
+for i in firstn():
+    print(i)
+
+
+def numConter(n):
+    num = 0
+    while (num<n):
+        yield num
+        num += 1
+
+#gerator func just can use in iteration 
+for i in numConter(100):
+    print(i)
