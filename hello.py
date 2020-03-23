@@ -169,3 +169,68 @@ def numConter(n):
 #gerator func just can use in iteration 
 for i in numConter(100):
     print(i)
+
+
+#oop in python
+
+class person:
+    count = 0
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+
+    def get_name(self):
+        print(f'name is {self.name}')
+
+    def get_age(self):
+        print(f'age is {self.age}')    
+
+
+mahmoud = person('mahmoud',23)
+mahmoud.get_name()
+
+
+#inherit class 
+
+class Computer:
+    count = 0
+    def __init__(self, ram , hdd , cpu):
+        self.ram = ram
+        self.hdd = hdd
+        self.cpu = cpu
+    def value(self):
+        return self.ram + self.hdd + self.cpu
+
+class Laptop(Computer):
+    def value(self):
+        return self.ram+self.hdd+self.cpu+self.size
+
+pc1 = Computer(12,256,4)
+print(pc1.value())
+
+laptop1 = Laptop(16,512,8)
+laptop1.size = 10
+print(laptop1.value())
+
+# iot example 
+
+class Device:
+    counter = 0
+    def __init__(self,ip,mac,name):
+        self.ip = ip
+        self.mac = mac
+        self.name = name
+        Device.counter += 1
+        result = 'ping'
+        if result:
+            #status active
+            self.status = 'active'
+        else:
+            self.status = 'fucked'
+        def get_status(self):
+             pass
+
+class SmartTv(Device):
+    def turn_on(self):
+        pass 
+
